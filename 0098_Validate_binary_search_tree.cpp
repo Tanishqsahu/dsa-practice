@@ -20,3 +20,34 @@ public:
 
     }
 };
+
+
+#Approach2
+
+
+class Solution {
+public:
+
+    TreeNode* prev=NULL;
+
+    bool isValidBST(TreeNode* root) {
+
+        if(root==NULL){
+            return true;
+        }
+        if(!isValidBST(root->left)){
+            return false;
+        }
+        if(prev!=NULL && root->val<=prev->val){
+            return false;
+        }
+        prev=root;
+
+        if(!isValidBST(root->right)){
+            return false;
+        }
+
+        return true;
+
+    }
+};
