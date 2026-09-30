@@ -9,11 +9,12 @@ void solve(){
     int n;
     cin>>n;
     map <int,int> freq;
+    int max_freq=0;
     for(int i=0;i<n*n;i++){
         int color;
         cin>>color;
         freq[color]++;
-        max_Freq=max(max_freq,freq[color]);
+        max_freq=max(max_freq,freq[color]);
         
     }
 
@@ -21,7 +22,7 @@ void solve(){
         cout<<"NO\n";
         return;
     }
-    if(max_Freq>(n*n-n)){
+    if(max_freq>(n*n-n)){
         cout<<"No\n";
     }
     else{
