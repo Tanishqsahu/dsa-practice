@@ -11,7 +11,7 @@ void solve(){
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
-    int count=0;
+    
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
             if (a[j] > a[i]) {
@@ -21,7 +21,7 @@ void solve(){
         }
     }
 
-    long long total_sum = 0;
+    int total_sum = 0;
     for (int i = 0; i < n; i++) {
         total_sum += a[i];
     }
